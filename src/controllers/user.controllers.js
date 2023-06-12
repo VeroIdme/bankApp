@@ -45,7 +45,7 @@ exports.loginUser = async (req, res) => {
             })
         }
         
-        user.update({ status: "loggin"})
+        await user.update({ status: "loggin"})
         
         return res.status(210).json({
             status: "success",
